@@ -1,0 +1,22 @@
+@import '../cssUtils.scss';
+
+nav{
+    background: $primary;
+    color: $secondary;
+    display: flex;
+    justify-content: space-between;
+    header{
+        line-height: 3em;
+    }
+    .pages{
+        display: flex;
+        line-height: 3em;
+        p{
+            margin: 0px;
+            border: {
+                left: 1px black solid;
+            };
+            padding: 0px 10px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@import '../cssUtils.scss';
+
+.Popup{
+    display: block;
+    width: 29rem;
+    height: 29rem;
+    position: fixed;
+    border: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $secondary;
+    border-radius: 4%;
+    background-color: $primary;
+    color: $secondary;
+    &_exit{
+        text-align: center;
+        background-color: $secondary;
+        color: black;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+    }
+
+    &-type{
+        text-align: center;
+    }
+    #form{
+        &-signup{
+            margin: 0 4em;
+            padding: 0 3em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .input{
+                padding: 0 1em;
+                text-align: center;
+                height: 2em;
+                margin-bottom: 1em;
+                border: {
+                    bottom-left-radius: 6% 56%;
+                    top-left-radius: 6% 56%;
+                    bottom-right-radius: 6% 56%;
+                    top-right-radius: 6% 56%;
+                }
+            }
+            .buttons{
+                display: flex;
+                justify-content: space-around;
+                &-bttn{
+                    line-height: 2em;
+                    height: 2em;
+                    width: 6em;
+                    background-color: black;
+                    color: white;
+                }
+                .active{
+                    background-color: $secondary;
+                    color: $primary;
+                }
+                .inactive{
+                    background-color: $primary;
+                    color: $secondary;
+                }
+            }
+            .submit{
+                padding: 1em 1em;
+                &-bttn{
+                    width: 10em;
+                    height: 10em;
+                }
+            }
+        }
+    }
+}

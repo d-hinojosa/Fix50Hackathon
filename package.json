@@ -1,0 +1,36 @@
+{
+  "name": "bloom",
+  "version": "1.0.0",
+  "description": "Solving Charlotte's economic mobility problem one step at a time",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node index.js",
+    "start:dev": "concurrently \"nodemon server.js --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd bloom && npm run start",
+    "install": "cd bloom && npm install",
+    "build": "cd bloom && npm run build",
+    "heroku-postbuild": "cd bloom && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gianna-miranda/bloom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gianna-miranda/bloom/issues"
+  },
+  "homepage": "https://github.com/gianna-miranda/bloom#readme",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "mongoose": "^5.7.7",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.4"
+  }
+}
